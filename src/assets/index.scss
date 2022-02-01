@@ -1,0 +1,41 @@
+body {
+ background-color:azure;
+}
+.wrap{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin:auto;
+  }
+  .box{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #000;
+  }
+  .redback{
+      background: rgb(184, 3, 3);
+  }
+  .blueback{
+    background: rgb(1, 1, 158);
+    }
+    .greenback{
+        background: green;
+    }
+    .yellowback{
+        background: rgb(155, 155, 0);
+    }
+  .activered{
+      background-color: rgb(255, 60, 60);
+  }
+  .activeblue{
+    background-color: rgb(80, 191, 255);
+    }
+    .activegreen{
+        background-color: rgb(125, 255, 125);
+    }
+    .activeyellow{
+        background-color: rgb(243, 255, 81);
+    }
