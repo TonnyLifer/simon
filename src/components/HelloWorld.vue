@@ -58,43 +58,9 @@ export default {
         4: bum4,
         5: error,
         6: aplodis,
-      },
-
-      // centerButton: "START",
-      // playing: false,
-      // isClickable: false,
-      // isWon: false,
-      // isWrong: false,
-      // // gameMode: 'normal',
-      // // activeBtn: 'btn2',
-      // score: 0,
-      // sequence: [],
-      // sequenceInterval: null,
-      // playerSequence: [],
-      // sounds: {
-      //   1: "sounds/plip.mp3",
-      //   2: "sounds/govilive.mp3",
-      //   3: "sounds/error.mp3",
-      //   4: "sounds/sswitch1.mp3",
-      //   5: "sounds/haa.mp3",
-      //   6: "sounds/good.mp3",
-      // },
-      // isLit: {
-      //   1: false,
-      //   2: false,
-      //   3: false,
-      //   4: false
-      // }
+      }
     }
   },
-  // computed: {
-  //   showScore() {
-  //     if (this.isWon) {
-  //       return "Play Again?";
-  //     }
-  //     return "Score: " + this.score;
-  //   }
-  // },
   methods: {
     Restart(){
       this.chek=0
@@ -188,96 +154,6 @@ export default {
       },this.mode)
       
     }
-    // playSound(tile) {
-    //   if(this.sounds[tile]) {
-    //     var audio = new Audio(this.sounds[tile]);
-    //     audio.play();
-    //   }
-    // },
-    // startGame() {
-    //   this.playing = true;
-    //   this.sequence = [];
-    //   this.playSound(5);
-    //   this.playerSequence = [];
-    //   this.centerButton = "RESET";
-    //   this.isWon = false;
-    //   this.isWrong = false;
-    //   this.score = 0;
-    //   clearInterval(this.sequenceInterval);
-    //   this.showSequence();
-    // },
-    // clicked(tile) {
-    //   if (this.isClickable) {
-    //     this.playSound(tile);
-    //     this.lightUp(tile);
-    //     this.playerSequence.push(tile);
-    //     this.checkWinLose();
-    //   }
-    // },
-    // checkWinLose() {
-    //   // check for incorrect
-    //   for (let i = 0; i < this.playerSequence.length; i++) {
-    //     if (this.playerSequence[i] !== this.sequence[i]) {
-    //       this.playerSequence = [];
-    //       this.centerButton = "Wrong!";
-    //       this.isWrong = true;
-    //       setTimeout(() => {
-    //         this.centerButton = "RESET";
-    //         this.isWrong = false;
-    //       }, 1000);
-    //       this.showSequence(true);
-    //     }
-    //   }
-    //   // if all correct and same length , continue
-    //   if (this.playerSequence.length === this.sequence.length) {
-    //     this.playerSequence = [];
-    //     this.score++;
-    //     // if win condition, show win, dont continue.
-    //     if (this.score === 5) {
-    //       this.centerButton = "Winner!";
-    //       setTimeout(() => this.playSound(6), 600);
-    //       this.isClickable = false;
-    //       this.isWon = true;
-    //     } else {
-    //       this.showSequence();
-    //     }
-    //   }
-    // },
-    // lightUp(tile) {
-    //   this.isLit[tile] = true;
-    //   setTimeout(() => {
-    //     this.isLit[tile] = false;
-    //   }, 300);
-    // },
-    // showSequence(redo) {
-    //   let currentIndex = 0;
-    //   let speed = this.sequence.length === 0 ? 1000 : this.getModeSpeed(this.gameMode);
-    //   this.isClickable = false;
-    //   if (!redo) {
-    //     // dont add number on incorrect answers
-    //     this.sequence.push(Math.floor(Math.random() * 4 + 1));
-    //   }
-    //   this.sequenceInterval = setInterval(() => {
-    //     if (currentIndex >= this.sequence.length) {
-    //       clearInterval(this.sequenceInterval);
-    //       return (this.isClickable = true);
-    //     }
-    //     this.playSound(this.sequence[currentIndex]);
-    //     this.lightUp(this.sequence[currentIndex]);
-    //     currentIndex++;
-    //   }, speed);
-    // },
-    // getModeSpeed(mode) {
-    //   if (mode === 'easy') {
-    //     return 1500;
-    //   }
-    //   else if (mode === 'normal') {
-    //     return 1000;
-    //   }
-    //   else {
-    //     return 400;
-    //   }
-    // }
   }
 }
 </script>
